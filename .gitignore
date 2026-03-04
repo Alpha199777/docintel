@@ -1,0 +1,10 @@
+# Environnement Python
+.venv/
+__pycache__/
+*.pyc
+
+# Secrets
+.env
+
+# Fichiers temporaires
+*.pdf
