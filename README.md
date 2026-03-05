@@ -15,7 +15,7 @@ docker compose up
 
 - Frontend : http://localhost:3000
 - API Swagger : http://localhost:8000/docs
-
+> ⚠️ Ces liens fonctionnent uniquement après avoir lancé le projet en local.
 ---
 
 ## 🏗️ Architecture
