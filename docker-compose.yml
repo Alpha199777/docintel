@@ -1,0 +1,23 @@
+# docker-compose.yml — Lance tout le projet en une commande
+# "docker compose up" démarre backend + frontend ensemble
+
+services:
+
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - APP_ENV=production
+    # Le backend repart automatiquement si il plante
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:80"
+    # Le frontend attend que le backend soit prêt
+    depends_on:
+      - backend
+    restart: unless-stopped
